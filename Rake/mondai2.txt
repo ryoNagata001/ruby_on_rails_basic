@@ -1,0 +1,29 @@
+Q,各rakeコマンドを使う目的を答えなさい
+データベース系
+rake db:migrate
+    未実行のマイグレーションファイルを実行
+        - schema_migrationテーブルを調べ、存在しなければ実行
+        - db/migrateディレクトリ内の全てのマイグレーションファイルを調べる
+        - データベースの現在のバージョンと異なるバージョンがあった場合データベースに適応
+        - schema_migrationsテーブルの更新
+
+rake db:create
+    datebase.ymlの設定に従って、データベースを作製する。
+        -database.ymlとはrailsのアプリケーションを作成した時に自動的に生成されるファイルで、
+        どのデータベースを使用するかを定義する(デフォルトはSQLiteになっている)
+        -使えるdbは以下
+            mysql / oracle / postgresql / sqlite3 / frontbase / ibm_db / sqlserver / jdbcmysql / jdbcsqlite3 / jdbcpostgresql / jdbc
+
+rake db:migrate:reset
+    databaseを一度削除してもう一度作成し、db:migrate実行
+        -テーブルの初期化
+
+rake db:drop
+    datebase.ymlの設定に従って、データベースを削除する。
+
+その他
+rake -T
+    Railsで使用できるコマンドの一覧を表示
+
+rake routes
+    設定されているルーティングの内容を確認
