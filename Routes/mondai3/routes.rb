@@ -3,7 +3,8 @@ Rails.application.routes.draw do
         member do
             put "like_count"
         end
-
+    end
+    resources :projects do
         collection do
             get "ranking"
         end
