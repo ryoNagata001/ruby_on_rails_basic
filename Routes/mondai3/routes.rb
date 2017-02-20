@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
     resources :companies do
-        resources :rankings, only: :index do
-            member do
-                update "like_count"
-            end
+        member do
+            put "like_count"
+        end
+
+        collection do
+            get "ranking"
         end
     end
 end
