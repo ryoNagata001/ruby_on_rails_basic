@@ -1,0 +1,46 @@
+URI
+/users/:id/articles/:article_id/comments
+/users/:id/articles/:article_id/comments/new
+/users/:id/articles/:article_id/comments/:id/edit
+/users/:id/articles/:article_id/comments/:id    show
+/users/:id/articles/:article_id/comments/:id    update(PUT)
+/users/:id/articles/:article_id/comments/:id    update(PATCH)
+/users/:id/articles/:article_id/comments/:id    destroy
+/users/:id/articles   index
+/users/:id/articles   create
+/users/:id/articles/new
+/users/:id/articles/:id/edit
+/users/:id/articles/:id   show
+/users/:id/articles/:id   update(PUT)
+/users/:id/articles/:id   update(PATCH)
+/users/:id/articles/:id   destroy
+
+/users
+/users/new
+/users/:id/edit
+/users/:id  show
+/users/:id  update(PUT)
+/users/:id  update(PATCH)
+/users/:id  destroy
+
+
+演習
+コメント一覧【GET】
+URL:/users/:id/articles/:article_id/comments
+アクション:index
+
+記事の新規作成画面【GET】
+URL:/users/:id/articles/new
+アクション:new
+
+記事の新規作成【POST】
+URL:/users/:id/articles
+アクション:create
+
+ユーザー詳細【GET】
+URL:/users/:id
+アクション:show
+
+記事削除【DELETE】
+URL:/users/:id/articles/:id
+アクション:destroy

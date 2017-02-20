@@ -1,0 +1,9 @@
+          URL method URL		 		Action	役割
+     users GET    /users(.:format)                index  	一覧画面を生成
+              POST   /users(.:format)                create 	新しいユーザを作る
+  new_user GET    /users/new(.:format)            new    	新しいユーザのデータ入力フォームを生成
+ edit_user GET    /users/:id/edit(.:format)       edit   	ユーザのデータ編集フォームを生成
+      user GET    /users/:id(.:format)            show   	ユーザの詳細画面を表示
+              PATCH  /users/:id(.:format)            update 	ユーザの冪等でない詳細を変更する(一部変更)
+              PUT    /users/:id(.:format)            update 	ユーザの情報を全て書き換える
+              DELETE /users/:id(.:format)            destroy	ユーザのデータを削除する
